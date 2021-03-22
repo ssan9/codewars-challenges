@@ -52,23 +52,23 @@ export default class WishlistForm extends React.Component {
   
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form id="my-form" onSubmit={this.handleSubmit}>
          <input
-            id="name"
             type="text"
+            id="name"
             name="name"
             value={this.state.name}
             onChange={this.handleChange}
          />
         <textarea id="wish" name="wish" value={this.state.wish} onChange={this.handleChange}>{this.state.wish}</textarea>       
-        <select name="priority" value={this.state.priority} id="priority" onChange={this.handleChange}>
+        <select id="priority" name="priority" value={this.state.priority} onChange={this.handleChange}>
             <option value={1}>1</option>
             <option value={2}>2</option>
             <option value={3}>3</option>
             <option value={4}>4</option>
             <option value={5}>5</option>
         </select>
-        <input type='submit' value="Submit" />
+        <input type="submit" value="Submit" />
       </form>
     );
   }
